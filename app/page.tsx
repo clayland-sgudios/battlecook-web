@@ -1,3 +1,17 @@
+import type { Metadata } from "next";
+
+import { getPage } from "@/directus/pages";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const pageData = await getPage("home");
+  const { title, meta_description } = pageData?.seo || {};
+
+  return {
+    title,
+    description: meta_description,
+  };
+}
+
 export default function Home() {
   return (
     <main className="flex flex-col gap-8 w-[85%] mx-auto items-center justify-center">

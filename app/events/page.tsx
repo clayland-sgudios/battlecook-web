@@ -1,6 +1,18 @@
 import dayjs from "dayjs";
+import type { Metadata } from "next";
 
 import { getEvents } from "@/directus/events";
+import { getPage } from "@/directus/pages";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const pageData = await getPage("events");
+  const { title, meta_description } = pageData?.seo || {};
+
+  return {
+    title,
+    description: meta_description,
+  };
+}
 
 export default async function Home() {
   const data = await getEvents();
