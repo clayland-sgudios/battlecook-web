@@ -8,7 +8,7 @@ export default function Footer() {
         <span className="text-xl font-bold">Quick Links:</span>
         <Link href="/">Home</Link>
         {/* <Link href="/features">Features</Link> */}
-        {/* <Link href="/events">Events</Link> */}
+        <Link href="/events">Events</Link>
       </div>
     </main>
   );

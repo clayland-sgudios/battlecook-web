@@ -7,9 +7,9 @@ export default function NavigationBar() {
         <a href="/" className="text-2xl font-bold">
           Battlecook
         </a>
-        <div className="flex max-lg:hidden lg:w-1/3 justify-end font-bold items-center">
+        <div className="flex max-lg:hidden lg:w-1/3 justify-end font-bold items-center gap-8">
           {/* <Link href="/features">Features</Link> */}
-          {/* <Link href="/events">Events</Link> */}
+          <Link href="/events">Events</Link>
           {/* <Link href="/news">News</Link> */}
           <Link
             className="bg-foreground px-8 py-4 text-black rounded-full"
